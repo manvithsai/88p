@@ -50,7 +50,7 @@ function my_keydown(e)
 	And id coordinates matches them remove ball image, 
 	display "GAME OVER!!!" 
 	and make canvas border 'red'. */
-	if((ball_x==hole_x)&&(ball_y==hole_y.remove1)){
+	if((ball_x==hole_x)&&(ball_y==hole_y)){
 	canvas.remove(ball_obj);
 	document.getElementById("hd3").innerHTML="you hit the goal";
 	document.getElementById("myCanvas").style.bordercolour="red";
@@ -81,7 +81,7 @@ function my_keydown(e)
 	
 	function up()
 	{
-		if(ball_y>=0){
+		if(ball_y>=5){
 			ball_y= ball_y-block_image_height;
         console.log("block_image_height="+block_image_height);
         console.log("when up arrow is pressed,x="+ball_x+"y="+ball_y);
@@ -103,7 +103,7 @@ function my_keydown(e)
 
 	function left()
 	{
-		if(ball_x >=5)
+		if(ball_x >5)
 		{
 			ball_x=ball_x-block_image_width;
     console.log("block_image_width="+block_image_width);
